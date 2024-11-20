@@ -1,0 +1,111 @@
+/* Carousel container */
+.carousel-container {
+    width: 90%; /* Adjust the width of the carousel */
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* Slick Slider Styles */
+  .slick-slider {
+    position: relative;
+  }
+  
+  /* Arrow Styling */
+  .slick-slider .slick-prev,
+  .slick-slider .slick-next {
+    font-size: 0; /* Hide default text content */
+    position: absolute;
+    top: 50%; /* Vertically center the arrows */
+    transform: translateY(-50%);
+    z-index: 1000; /* Ensure arrows are above content */
+    cursor: pointer;
+    width: 40px; /* Arrow container width */
+    height: 40px; /* Arrow container height */
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 50%; /* Circular buttons */
+    border: 1px solid #ccc; /* Optional border */
+  }
+  
+  /* Left Arrow Position */
+  .slick-slider .slick-prev {
+    left: -50px; /* Adjust distance from the carousel */
+  }
+  
+  /* Right Arrow Position */
+  .slick-slider .slick-next {
+    right: -50px; /* Adjust distance from the carousel */
+  }
+  
+  /* Arrow Icons */
+  .slick-slider .slick-prev:before,
+  .slick-slider .slick-next:before {
+    font-size: 20px; /* Size of the arrow icons */
+    color: #000 !important; /* Set arrow color to black */
+  }
+  
+  /* Hover Effect for Arrows */
+  .slick-slider .slick-prev:hover,
+  .slick-slider .slick-next:hover {
+    background-color: #d1d1d1; /* Darken background on hover */
+  }
+  
+  /* Dots Navigation */
+  .slick-dots {
+    position: absolute;
+    bottom: -30px; /* Position dots below the carousel */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px; /* Size of the dots */
+    color: #333; /* Default color for dots */
+    opacity: 0.5; /* Semi-transparent inactive dots */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #000; /* Black color for active dot */
+    opacity: 1; /* Fully opaque active dot */
+  }
+  
+  /* Slide Item Styling */
+  .slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-slide img {
+    max-width: 100%; /* Ensure images fit within their containers */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover the container area neatly */
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 1024px) {
+    .slick-slider .slick-prev {
+      left: -30px; /* Adjust arrow position for medium screens */
+    }
+    .slick-slider .slick-next {
+      right: -30px; /* Adjust arrow position for medium screens */
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .slick-slider .slick-prev,
+    .slick-slider .slick-next {
+      display: none; /* Hide arrows on small screens */
+    }
+  
+    .slick-dots {
+      bottom: -20px; /* Adjust dots position for smaller screens */
+    }
+  }
+  

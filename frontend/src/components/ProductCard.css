@@ -1,0 +1,75 @@
+/* Product Card Container */
+.product-card {
+    width: 300px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .product-card img {
+    width: 100%; /* Prevents image overflow */
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .product-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    font-family: 'Avenir', sans-serif;
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Star Rating */
+  .star-rating {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px; /* Space between popularity text and stars */
+  }
+  
+  .star {
+    font-size: 16px; /* Adjust size as needed */
+    color: #FFD700; /* Gold color for full stars */
+    margin-right: 2px;
+  }
+  
+  .star.half-star {
+    color: #FFD700; /* Same gold color as full stars */
+    position: relative;
+  }
+  
+  .star.empty-star {
+    color: #D3D3D3; /* Gray color for empty stars */
+  }
+  
+  /* Color Options */
+  .color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .color-options button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .color-options button:hover {
+    transform: scale(1.2);
+  }
+  
