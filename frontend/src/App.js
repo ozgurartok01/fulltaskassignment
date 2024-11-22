@@ -9,10 +9,11 @@ import './font.css';
 const App = () => {
   const [products, setProducts] = useState([]);
   const [filters, setFilters] = useState({});
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
   useEffect(() => {
     const query = new URLSearchParams(filters).toString();
-    fetch(`http://localhost:5000/api/products?${query}`)
+    fetch(`${API_URL}/api/products?${query}`)
       .then((response) => {
         if (!response.ok) throw new Error("Failed to fetch products");
         return response.json();
